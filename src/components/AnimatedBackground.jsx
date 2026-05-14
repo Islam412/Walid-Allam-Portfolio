@@ -14,7 +14,6 @@ const AnimatedBackground = () => {
   
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {/* كرات ضوئية متحركة */}
       <motion.div
         className="absolute w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-3xl"
         animate={{
