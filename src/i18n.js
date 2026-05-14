@@ -22,7 +22,13 @@ const resources = {
         "available": "Available for work",
         "openToOpportunities": "Open to opportunities",
         "viewCV": "View CV",
-        "scrollDown": "Scroll Down"
+        "scrollDown": "Scroll Down",
+        "yearsExperience": "Years Experience",
+        "licensed": "B1 Licensed",
+        "featuredBadge": "Featured Projects",
+        "excellenceBadge": "20+ Years of Excellence",
+        "portfolioBadge": "Professional Portfolio",
+        "whoAmIBadge": "Who Am I"
       },
       
       // ==================== ABOUT SECTION ====================
@@ -49,9 +55,9 @@ const resources = {
         "stats": {
           "yearsLabel": "Years Experience",
           "ratingsLabel": "Type Ratings",
-          "projectsLabel": "New Projects",
+          "projectsLabel": "Aircraft Projects",
           "destinationsLabel": "Destinations",
-          "licenseLabel": "License",
+          "licenseLabel": "B1 Licensed",
           "authorityLabel": "Authority",
           "yearsDetail": "Since 2004",
           "ratingsDetail": "Wide-body aircraft",
@@ -68,7 +74,9 @@ const resources = {
           "validUntil": "✓ Valid until 2025",
           "ecaaApproved": "✓ ECAA Approved",
           "easaCompliant": "✓ EASA Compliant"
-        }
+        },
+        "teamMembers": "Team Members",
+        "yearsExperience": "20+ Years"
       },
       
       // ==================== WORK GALLERY SECTION ====================
@@ -132,7 +140,12 @@ const resources = {
         "readMore": "Read More",
         "learnMore": "Learn More",
         "getInTouch": "Get in Touch",
-        "sendMessage": "Send Message"
+        "sendMessage": "Send Message",
+        "professionalPortfolio": "Professional Portfolio",
+        "whoAmI": "Who Am I",
+        "teamMembers": "Team Members",
+        "aircraftProjects": "Aircraft Projects",
+        "typeRatings": "Type Ratings"
       }
     }
   },
@@ -157,7 +170,13 @@ const resources = {
         "available": "متاح للعمل",
         "openToOpportunities": "متاح للفرص",
         "viewCV": "عرض السيرة الذاتية",
-        "scrollDown": "مرر لأسفل"
+        "scrollDown": "مرر لأسفل",
+        "yearsExperience": "سنوات خبرة",
+        "licensed": "مرخص B1",
+        "featuredBadge": "المشاريع المميزة",
+        "excellenceBadge": "20+ سنة من التميز",
+        "portfolioBadge": "المشاريع الاحترافية",
+        "whoAmIBadge": "من أنا"
       },
       
       // ==================== ABOUT SECTION ====================
@@ -184,9 +203,9 @@ const resources = {
         "stats": {
           "yearsLabel": "سنوات خبرة",
           "ratingsLabel": "اعتمادات",
-          "projectsLabel": "مشاريع جديدة",
+          "projectsLabel": "مشاريع طائرات",
           "destinationsLabel": "وجهات",
-          "licenseLabel": "رخصة",
+          "licenseLabel": "مرخص B1",
           "authorityLabel": "جهة اعتماد",
           "yearsDetail": "منذ 2004",
           "ratingsDetail": "طائرات عريضة البدن",
@@ -203,7 +222,9 @@ const resources = {
           "validUntil": "✓ ساري حتى 2025",
           "ecaaApproved": "✓ معتمد من ECAA",
           "easaCompliant": "✓ متوافق مع EASA"
-        }
+        },
+        "teamMembers": "أعضاء الفريق",
+        "yearsExperience": "20+ سنة"
       },
       
       // ==================== WORK GALLERY SECTION ====================
@@ -267,7 +288,12 @@ const resources = {
         "readMore": "اقرأ المزيد",
         "learnMore": "اعرف أكثر",
         "getInTouch": "تواصل معي",
-        "sendMessage": "أرسل رسالة"
+        "sendMessage": "أرسل رسالة",
+        "professionalPortfolio": "المشاريع الاحترافية",
+        "whoAmI": "من أنا",
+        "teamMembers": "أعضاء الفريق",
+        "aircraftProjects": "مشاريع طائرات",
+        "typeRatings": "اعتمادات"
       }
     }
   },
@@ -292,7 +318,13 @@ const resources = {
         "available": "Disponible pour travail",
         "openToOpportunities": "Ouvert aux opportunités",
         "viewCV": "Voir CV",
-        "scrollDown": "Défiler vers le bas"
+        "scrollDown": "Défiler vers le bas",
+        "yearsExperience": "Années d'expérience",
+        "licensed": "Licencié B1",
+        "featuredBadge": "Projets en vedette",
+        "excellenceBadge": "20+ ans d'excellence",
+        "portfolioBadge": "Portfolio Professionnel",
+        "whoAmIBadge": "Qui suis-je"
       },
       
       // ==================== ABOUT SECTION ====================
@@ -319,9 +351,9 @@ const resources = {
         "stats": {
           "yearsLabel": "Années d'expérience",
           "ratingsLabel": "Qualifications",
-          "projectsLabel": "Nouveaux projets",
+          "projectsLabel": "Projets d'avions",
           "destinationsLabel": "Destinations",
-          "licenseLabel": "Licence",
+          "licenseLabel": "Licencié B1",
           "authorityLabel": "Autorité",
           "yearsDetail": "Depuis 2004",
           "ratingsDetail": "Avion à fuselage large",
@@ -338,7 +370,9 @@ const resources = {
           "validUntil": "✓ Valable jusqu'en 2025",
           "ecaaApproved": "✓ Approuvé ECAA",
           "easaCompliant": "✓ Conforme EASA"
-        }
+        },
+        "teamMembers": "Membres de l'équipe",
+        "yearsExperience": "20+ ans"
       },
       
       // ==================== WORK GALLERY SECTION ====================
@@ -402,7 +436,12 @@ const resources = {
         "readMore": "Lire la suite",
         "learnMore": "En savoir plus",
         "getInTouch": "Me contacter",
-        "sendMessage": "Envoyer message"
+        "sendMessage": "Envoyer message",
+        "professionalPortfolio": "Portfolio Professionnel",
+        "whoAmI": "Qui suis-je",
+        "teamMembers": "Membres de l'équipe",
+        "aircraftProjects": "Projets d'avions",
+        "typeRatings": "Qualifications"
       }
     }
   }
