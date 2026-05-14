@@ -246,7 +246,7 @@ const WorkGallery = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="inline-flex flex-col items-center gap-4">
+          {/* <div className="inline-flex flex-col items-center gap-4">
             <div className="flex gap-2">
               <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse delay-200" />
@@ -273,7 +273,7 @@ const WorkGallery = () => {
             <p className="text-xs text-gray-500 mt-2">
               Showing 6 of 12 completed projects
             </p>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>
