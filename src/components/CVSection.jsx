@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaDownload, FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaDownload, FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 import cvFile from '../assets/cv.pdf';
 
 const CVSection = () => {
@@ -10,52 +10,17 @@ const CVSection = () => {
     phone1: '+2 01014141120',
     phone2: '+2 0100 6018846',
     email: 'Walidallam9@gmail.com',
-    address: '144 Region 9–Narges district–Al shorouk City–Cairo - Egypt'
+    address: t('cv.address')
   };
   
   const socialLinks = [
-    {
-      name: 'whatsapp',
-      icon: FaWhatsapp,
-      url: `https://wa.me/201014141120`,
-      color: 'from-green-500 to-green-600',
-      delay: 0.1
-    },
-    {
-      name: 'phone',
-      icon: FaPhone,
-      url: `tel:${contactInfo.phone1.replace(/\s/g, '')}`,
-      color: 'from-blue-500 to-blue-600',
-      delay: 0.15
-    },
-    {
-      name: 'facebook',
-      icon: FaFacebook,
-      url: 'https://www.facebook.com/share/1CWY87ENze/',
-      color: 'from-blue-600 to-blue-700',
-      delay: 0.2
-    },
-    {
-      name: 'instagram',
-      icon: FaInstagram,
-      url: 'https://www.instagram.com/walid_allam9?igsh=am12aXVzZWM2a3Bo',
-      color: 'from-pink-500 to-purple-600',
-      delay: 0.3
-    },
-    {
-      name: 'linkedin',
-      icon: FaLinkedin,
-      url: 'https://www.linkedin.com/in/walid-allam-84339b23b/',
-      color: 'from-blue-700 to-blue-800',
-      delay: 0.4
-    },
-    {
-      name: 'email',
-      icon: FaEnvelope,
-      url: `mailto:${contactInfo.email}`,
-      color: 'from-red-500 to-red-600',
-      delay: 0.6
-    }
+    { name: 'whatsapp', icon: FaWhatsapp, url: `https://wa.me/20106018846`, color: 'from-green-500 to-green-600', delay: 0.1 },
+    { name: 'phone', icon: FaPhone, url: `tel:${contactInfo.phone1.replace(/\s/g, '')}`, color: 'from-blue-500 to-blue-600', delay: 0.15 },
+    { name: 'facebook', icon: FaFacebook, url: 'https://facebook.com/walid.allam', color: 'from-blue-600 to-blue-700', delay: 0.2 },
+    { name: 'instagram', icon: FaInstagram, url: 'https://instagram.com/walid.allam', color: 'from-pink-500 to-purple-600', delay: 0.3 },
+    { name: 'linkedin', icon: FaLinkedin, url: 'https://linkedin.com/in/walid-allam', color: 'from-blue-700 to-blue-800', delay: 0.4 },
+    { name: 'github', icon: FaGithub, url: 'https://github.com/walidallam', color: 'from-gray-700 to-gray-800', delay: 0.5 },
+    { name: 'email', icon: FaEnvelope, url: `mailto:${contactInfo.email}`, color: 'from-red-500 to-red-600', delay: 0.6 }
   ];
 
   return (
@@ -67,6 +32,7 @@ const CVSection = () => {
           transition={{ duration: 0.5 }}
           className="glass-morphism p-6 mb-8 text-center"
         >
+          <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('cv.contactQuick')}</h3>
           <div className="flex flex-wrap justify-center gap-6">
             <div className="flex items-center gap-2">
               <FaPhone className="text-green-400" />
@@ -77,9 +43,9 @@ const CVSection = () => {
               <span className="text-gray-300">{contactInfo.email}</span>
             </div>
           </div>
+          <p className="text-gray-400 text-sm mt-3">{contactInfo.address}</p>
         </motion.div>
 
-        {/* قسم السيرة الذاتية */}
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -98,10 +64,10 @@ const CVSection = () => {
               <FaDownload /> {t('cv.download')}
             </motion.a>
           </div>
+          <p className="text-center text-gray-400 text-sm mb-4">{t('cv.preview')}</p>
           <iframe src={cvFile} className="w-full h-[600px] rounded-xl border border-white/20" title="CV Preview" />
         </motion.div>
 
-        {/* قسم التواصل الاجتماعي */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,11 +77,11 @@ const CVSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
             {t('contact.title')}
           </h2>
-          <p className="text-gray-300">Connect with me on social media | تابعني على وسائل التواصل</p>
+          <p className="text-gray-300">{t('contact.subtitle')}</p>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-4">
-          {socialLinks.map((social, index) => (
+          {socialLinks.map((social) => (
             <motion.a
               key={social.name}
               href={social.url}
@@ -124,38 +90,14 @@ const CVSection = () => {
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: social.delay, type: "spring", stiffness: 200 }}
-              whileHover={{ 
-                scale: 1.15,
-                rotate: 5,
-                transition: { type: "spring", stiffness: 400 }
-              }}
+              whileHover={{ scale: 1.15, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
-              className={`
-                relative group px-6 py-3 rounded-full font-semibold text-white
-                bg-gradient-to-r ${social.color}
-                shadow-lg hover:shadow-2xl transition-all duration-300
-                flex items-center gap-2 overflow-hidden
-              `}
+              className={`relative group px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r ${social.color} shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-2 overflow-hidden`}
             >
-              <motion.div
-                className="absolute inset-0 bg-white/30"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: '100%' }}
-                transition={{ duration: 0.5 }}
-              />
-              
+              <motion.div className="absolute inset-0 bg-white/30" initial={{ x: '-100%' }} whileHover={{ x: '100%' }} transition={{ duration: 0.5 }} />
               <social.icon className="relative z-10 text-lg" />
-              <span className="relative z-10 hidden sm:inline capitalize">
-                {social.name}
-              </span>
-              
-              <div 
-                className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  boxShadow: '0 0 20px currentColor',
-                  filter: 'blur(4px)'
-                }}
-              />
+              <span className="relative z-10 hidden sm:inline capitalize">{t(`contact.${social.name}`)}</span>
+              <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ boxShadow: '0 0 20px currentColor', filter: 'blur(4px)' }} />
             </motion.a>
           ))}
         </div>
@@ -166,8 +108,7 @@ const CVSection = () => {
           transition={{ delay: 0.8 }}
           className="text-center mt-8 text-gray-400 text-sm"
         >
-          <p>📱 Available 24/7 for professional inquiries | متاح للتواصل المهني 24/7</p>
-          <p className="mt-2">📍 {contactInfo.address}</p>
+          <p>📱 {t('contact.availability')}</p>
         </motion.div>
       </div>
     </section>
