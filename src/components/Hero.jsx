@@ -14,7 +14,6 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="text-center z-10 px-4"
       >
-        {/* صورة شخصية مع تأثير دوران */}
         <motion.div 
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
@@ -26,12 +25,11 @@ const Hero = () => {
           </div>
           <div className="relative w-full h-full rounded-full overflow-hidden">
             <img 
-              src="https://ui-avatars.com/api/?name=Walid+Allam&background=3b82f6&color=fff&size=150&bold=true&length=2&fontsize=0.6"
+              src="/profile.jpg"
               alt="Walid Allam" 
               className="w-full h-full object-cover"
             />
           </div>
-          {/* علامة توثيق متحركة */}
           <motion.div 
             className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-1.5"
             animate={{ scale: [1, 1.2, 1] }}
