@@ -7,7 +7,6 @@ const Hero = () => {
   
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-custom" />
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" />
@@ -28,7 +27,7 @@ const Hero = () => {
           className="w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-blue-500 neon-border mb-6"
         >
           <img 
-            src="/profile.jpg"
+            src="https://ui-avatars.com/api/?name=Walid+Allam&background=3b82f6&color=fff&size=150&bold=true&length=2&fontsize=0.6"
             alt="Walid Allam" 
             className="w-full h-full object-cover"
           />
@@ -67,7 +66,7 @@ const Hero = () => {
           transition={{ delay: 0.9 }}
           className="text-sm text-cyan-400 mb-8"
         >
-          B737 | B777 | B787 | A330 | A300-600
+          {t('hero.typeRatings')}
         </motion.p>
         
         <motion.a 
