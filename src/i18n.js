@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      // Navbar
+      // ==================== NAVBAR ====================
       "nav": {
         "home": "Home",
         "about": "About",
@@ -12,18 +12,23 @@ const resources = {
         "cv": "CV"
       },
       
-      // Hero Section
+      // ==================== HERO SECTION ====================
       "hero": {
         "greeting": "Hello, I'm",
         "name": "Walid Allam",
         "title": "Civil Aviation Engineer | B1 Licensed",
         "cta": "Explore My Work",
-        "typeRatings": "B737 | B777 | B787 | A330 | A300-600"
+        "typeRatings": "B737 | B777 | B787 | A330 | A300-600",
+        "available": "Available for work",
+        "openToOpportunities": "Open to opportunities",
+        "viewCV": "View CV",
+        "scrollDown": "Scroll Down"
       },
       
-      // About Section
+      // ==================== ABOUT SECTION ====================
       "about": {
         "title": "About Me",
+        "badge": "Who Am I",
         "exp1": {
           "title": "20+ Years Experience",
           "desc": "In civil aircraft maintenance & engineering"
@@ -40,13 +45,40 @@ const resources = {
         "typeRatingsTitle": "Aircraft Type Ratings",
         "projectsTitle": "EgyptAir New Projects",
         "licensesTitle": "Licenses & Certifications",
-        "licenses": ["B1 Licensed Engineer", "Part 145", "Part M", "LWTR", "ETOPS", "EWIS", "CDCCL", "Human Factor"]
+        "licenses": ["B1 Licensed Engineer", "Part 145", "Part M", "LWTR", "ETOPS", "EWIS", "CDCCL", "Human Factor"],
+        "stats": {
+          "yearsLabel": "Years Experience",
+          "ratingsLabel": "Type Ratings",
+          "projectsLabel": "New Projects",
+          "destinationsLabel": "Destinations",
+          "licenseLabel": "License",
+          "authorityLabel": "Authority",
+          "yearsDetail": "Since 2004",
+          "ratingsDetail": "Wide-body aircraft",
+          "projectsDetail": "For EgyptAir",
+          "destinationsDetail": "Worldwide",
+          "licenseDetail": "ECAA Certified",
+          "authorityDetail": "Approved Organization"
+        },
+        "additionalInfo": {
+          "activeSince": "✓ Active since 2004",
+          "safetyRecord": "✓ 100% Safety Record",
+          "aircraftTypes": "✓ 11 Aircraft Types",
+          "fleet": "✓ EgyptAir Fleet",
+          "validUntil": "✓ Valid until 2025",
+          "ecaaApproved": "✓ ECAA Approved",
+          "easaCompliant": "✓ EASA Compliant"
+        }
       },
       
-      // Work Gallery Section
+      // ==================== WORK GALLERY SECTION ====================
       "work": {
         "title": "My Work Gallery",
         "desc": "Aircraft maintenance & engineering projects - Licensed on B737, B777, B787, A330 & A300-600",
+        "badge": "Professional Portfolio",
+        "viewAll": "View All Projects",
+        "showing": "Showing 6 of 12 completed projects",
+        "clickToView": "Click to view details",
         "projects": {
           "1": {"title": "Boeing 787 Dreamliner", "subtitle": "Type Rating & Maintenance", "category": "Wide-Body Aircraft"},
           "2": {"title": "Boeing 777-300ER", "subtitle": "EgyptAir Fleet Project 2010", "category": "Long Haul Aircraft"},
@@ -57,7 +89,7 @@ const resources = {
         }
       },
       
-      // CV Section
+      // ==================== CV / CONTACT SECTION ====================
       "cv": {
         "title": "Curriculum Vitae",
         "download": "Download CV",
@@ -66,7 +98,7 @@ const resources = {
         "address": "144 Region 9–Narges district–Al shorouk City–Cairo - Egypt"
       },
       
-      // Contact Section
+      // ==================== CONTACT SECTION ====================
       "contact": {
         "title": "Contact Me",
         "subtitle": "Connect with me on social media",
@@ -80,21 +112,34 @@ const resources = {
         "availability": "Available 24/7 for professional inquiries"
       },
       
-      // Footer
+      // ==================== FOOTER ====================
       "footer": {
         "rights": "All Rights Reserved.",
         "rightsAr": "جميع الحقوق محفوظة",
         "developed": "Developed with",
         "by": "by",
         "designer": "Islam Hamdy",
-        "separator": "✦"
+        "separator": "✦",
+        "forEngineer": "for Eng. Walid Allam"
+      },
+      
+      // ==================== COMMON ====================
+      "common": {
+        "years": "Years",
+        "projects": "Projects",
+        "experience": "Experience",
+        "certifications": "Certifications",
+        "readMore": "Read More",
+        "learnMore": "Learn More",
+        "getInTouch": "Get in Touch",
+        "sendMessage": "Send Message"
       }
     }
   },
   
   ar: {
     translation: {
-      // Navbar
+      // ==================== NAVBAR ====================
       "nav": {
         "home": "الرئيسية",
         "about": "من أنا",
@@ -102,18 +147,23 @@ const resources = {
         "cv": "السيرة الذاتية"
       },
       
-      // Hero Section
+      // ==================== HERO SECTION ====================
       "hero": {
         "greeting": "مرحباً، أنا",
         "name": "وليد علام",
         "title": "مهندس طيران مدني | مرخص B1",
         "cta": "استكشف أعمالي",
-        "typeRatings": "بوينغ 737 | بوينغ 777 | بوينغ 787 | إيرباص A330 | إيرباص A300-600"
+        "typeRatings": "بوينغ 737 | بوينغ 777 | بوينغ 787 | إيرباص A330 | إيرباص A300-600",
+        "available": "متاح للعمل",
+        "openToOpportunities": "متاح للفرص",
+        "viewCV": "عرض السيرة الذاتية",
+        "scrollDown": "مرر لأسفل"
       },
       
-      // About Section
+      // ==================== ABOUT SECTION ====================
       "about": {
         "title": "من أنا",
+        "badge": "من هو",
         "exp1": {
           "title": "خبرة 20+ سنة",
           "desc": "في صيانة وهندسة الطائرات المدنية"
@@ -130,13 +180,40 @@ const resources = {
         "typeRatingsTitle": "اعتمادات أنواع الطائرات",
         "projectsTitle": "مشاريع مصر للطيران الجديدة",
         "licensesTitle": "الرخص والشهادات",
-        "licenses": ["مهندس مرخص B1", "الجزء 145", "الجزء M", "LWTR", "ETOPS", "EWIS", "CDCCL", "العامل البشري"]
+        "licenses": ["مهندس مرخص B1", "الجزء 145", "الجزء M", "LWTR", "ETOPS", "EWIS", "CDCCL", "العامل البشري"],
+        "stats": {
+          "yearsLabel": "سنوات خبرة",
+          "ratingsLabel": "اعتمادات",
+          "projectsLabel": "مشاريع جديدة",
+          "destinationsLabel": "وجهات",
+          "licenseLabel": "رخصة",
+          "authorityLabel": "جهة اعتماد",
+          "yearsDetail": "منذ 2004",
+          "ratingsDetail": "طائرات عريضة البدن",
+          "projectsDetail": "لمصر للطيران",
+          "destinationsDetail": "حول العالم",
+          "licenseDetail": "معتمد من ECAA",
+          "authorityDetail": "منظمة معتمدة"
+        },
+        "additionalInfo": {
+          "activeSince": "✓ نشط منذ 2004",
+          "safetyRecord": "✓ سجل أمان 100%",
+          "aircraftTypes": "✓ 11 نوع طائرات",
+          "fleet": "✓ أسطول مصر للطيران",
+          "validUntil": "✓ ساري حتى 2025",
+          "ecaaApproved": "✓ معتمد من ECAA",
+          "easaCompliant": "✓ متوافق مع EASA"
+        }
       },
       
-      // Work Gallery Section
+      // ==================== WORK GALLERY SECTION ====================
       "work": {
         "title": "معرض أعمالي",
         "desc": "مشاريع صيانة وهندسة الطائرات - مرخص على بوينغ 737، 777، 787، إيرباص A330 و A300-600",
+        "badge": "المشاريع الاحترافية",
+        "viewAll": "عرض كل المشاريع",
+        "showing": "عرض 6 من 12 مشروع مكتمل",
+        "clickToView": "اضغط لعرض التفاصيل",
         "projects": {
           "1": {"title": "بوينغ 787 دريملاينر", "subtitle": "اعتماد الصيانة", "category": "طائرات عريضة البدن"},
           "2": {"title": "بوينغ 777-300ER", "subtitle": "مشروع أسطول مصر للطيران 2010", "category": "طائرات بعيدة المدى"},
@@ -147,7 +224,7 @@ const resources = {
         }
       },
       
-      // CV Section
+      // ==================== CV / CONTACT SECTION ====================
       "cv": {
         "title": "السيرة الذاتية",
         "download": "تحميل السيرة الذاتية",
@@ -156,7 +233,7 @@ const resources = {
         "address": "144 منطقة 9 – حي النرجس – مدينة الشروق – القاهرة - مصر"
       },
       
-      // Contact Section
+      // ==================== CONTACT SECTION ====================
       "contact": {
         "title": "تواصل معي",
         "subtitle": "تابعني على وسائل التواصل الاجتماعي",
@@ -170,21 +247,34 @@ const resources = {
         "availability": "متاح للتواصل المهني 24/7"
       },
       
-      // Footer
+      // ==================== FOOTER ====================
       "footer": {
         "rights": "جميع الحقوق محفوظة.",
         "rightsAr": "جميع الحقوق محفوظة",
         "developed": "تم التطوير بـ",
         "by": "بواسطة",
         "designer": "إسلام حمدي",
-        "separator": "✦"
+        "separator": "✦",
+        "forEngineer": "للمهندس وليد علام"
+      },
+      
+      // ==================== COMMON ====================
+      "common": {
+        "years": "سنوات",
+        "projects": "مشاريع",
+        "experience": "خبرة",
+        "certifications": "شهادات",
+        "readMore": "اقرأ المزيد",
+        "learnMore": "اعرف أكثر",
+        "getInTouch": "تواصل معي",
+        "sendMessage": "أرسل رسالة"
       }
     }
   },
   
   fr: {
     translation: {
-      // Navbar
+      // ==================== NAVBAR ====================
       "nav": {
         "home": "Accueil",
         "about": "À propos",
@@ -192,18 +282,23 @@ const resources = {
         "cv": "CV"
       },
       
-      // Hero Section
+      // ==================== HERO SECTION ====================
       "hero": {
         "greeting": "Bonjour, je suis",
         "name": "Walid Allam",
         "title": "Ingénieur Aviation Civile | Licence B1",
         "cta": "Voir mes travaux",
-        "typeRatings": "B737 | B777 | B787 | A330 | A300-600"
+        "typeRatings": "B737 | B777 | B787 | A330 | A300-600",
+        "available": "Disponible pour travail",
+        "openToOpportunities": "Ouvert aux opportunités",
+        "viewCV": "Voir CV",
+        "scrollDown": "Défiler vers le bas"
       },
       
-      // About Section
+      // ==================== ABOUT SECTION ====================
       "about": {
         "title": "À propos de moi",
+        "badge": "Qui suis-je",
         "exp1": {
           "title": "20+ ans d'expérience",
           "desc": "Maintenance et ingénierie aéronautique civile"
@@ -220,13 +315,40 @@ const resources = {
         "typeRatingsTitle": "Qualifications des types d'avions",
         "projectsTitle": "Nouveaux projets EgyptAir",
         "licensesTitle": "Licences et certifications",
-        "licenses": ["Ingénieur licencié B1", "Partie 145", "Partie M", "LWTR", "ETOPS", "EWIS", "CDCCL", "Facteur humain"]
+        "licenses": ["Ingénieur licencié B1", "Partie 145", "Partie M", "LWTR", "ETOPS", "EWIS", "CDCCL", "Facteur humain"],
+        "stats": {
+          "yearsLabel": "Années d'expérience",
+          "ratingsLabel": "Qualifications",
+          "projectsLabel": "Nouveaux projets",
+          "destinationsLabel": "Destinations",
+          "licenseLabel": "Licence",
+          "authorityLabel": "Autorité",
+          "yearsDetail": "Depuis 2004",
+          "ratingsDetail": "Avion à fuselage large",
+          "projectsDetail": "Pour EgyptAir",
+          "destinationsDetail": "Monde entier",
+          "licenseDetail": "Certifié ECAA",
+          "authorityDetail": "Organisation approuvée"
+        },
+        "additionalInfo": {
+          "activeSince": "✓ Actif depuis 2004",
+          "safetyRecord": "✓ Record de sécurité 100%",
+          "aircraftTypes": "✓ 11 types d'avions",
+          "fleet": "✓ Flotte EgyptAir",
+          "validUntil": "✓ Valable jusqu'en 2025",
+          "ecaaApproved": "✓ Approuvé ECAA",
+          "easaCompliant": "✓ Conforme EASA"
+        }
       },
       
-      // Work Gallery Section
+      // ==================== WORK GALLERY SECTION ====================
       "work": {
         "title": "Galerie de travaux",
         "desc": "Projets de maintenance et d'ingénierie aéronautique - Licencié sur B737, B777, B787, A330 & A300-600",
+        "badge": "Portfolio Professionnel",
+        "viewAll": "Voir tous les projets",
+        "showing": "Affichage de 6 projets sur 12",
+        "clickToView": "Cliquez pour voir les détails",
         "projects": {
           "1": {"title": "Boeing 787 Dreamliner", "subtitle": "Qualification & Maintenance", "category": "Avion à fuselage large"},
           "2": {"title": "Boeing 777-300ER", "subtitle": "Projet flotte EgyptAir 2010", "category": "Avion long-courrier"},
@@ -237,7 +359,7 @@ const resources = {
         }
       },
       
-      // CV Section
+      // ==================== CV / CONTACT SECTION ====================
       "cv": {
         "title": "Curriculum Vitae",
         "download": "Télécharger CV",
@@ -246,7 +368,7 @@ const resources = {
         "address": "144 Région 9 – District Narges – Ville Al shorouk – Le Caire - Égypte"
       },
       
-      // Contact Section
+      // ==================== CONTACT SECTION ====================
       "contact": {
         "title": "Contactez-moi",
         "subtitle": "Connectez-vous avec moi sur les réseaux sociaux",
@@ -260,14 +382,27 @@ const resources = {
         "availability": "Disponible 24/7 pour les demandes professionnelles"
       },
       
-      // Footer
+      // ==================== FOOTER ====================
       "footer": {
         "rights": "Tous droits réservés.",
         "rightsAr": "جميع الحقوق محفوظة",
         "developed": "Développé avec",
         "by": "par",
         "designer": "Islam Hamdy",
-        "separator": "✦"
+        "separator": "✦",
+        "forEngineer": "pour l'ing. Walid Allam"
+      },
+      
+      // ==================== COMMON ====================
+      "common": {
+        "years": "Années",
+        "projects": "Projets",
+        "experience": "Expérience",
+        "certifications": "Certifications",
+        "readMore": "Lire la suite",
+        "learnMore": "En savoir plus",
+        "getInTouch": "Me contacter",
+        "sendMessage": "Envoyer message"
       }
     }
   }
