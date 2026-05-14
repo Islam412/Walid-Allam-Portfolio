@@ -6,21 +6,22 @@ const About = () => {
   const { t } = useTranslation();
   
   const stats = [
-    { icon: Calendar, value: '20+', label: 'Years Experience', color: 'from-blue-500 to-blue-600' },
-    { icon: Wrench, value: '5', label: 'Type Ratings', color: 'from-cyan-500 to-cyan-600' },
-    { icon: Award, value: '11', label: 'New Aircraft Projects', color: 'from-purple-500 to-purple-600' },
-    { icon: Globe, value: 'Multiple', label: 'Destinations Worldwide', color: 'from-emerald-500 to-emerald-600' },
-    { icon: BookOpen, value: 'B1', label: 'Licensed Engineer', color: 'from-orange-500 to-orange-600' },
-    { icon: Users, value: 'Part 145', label: 'Base Maintenance', color: 'from-rose-500 to-rose-600' },
+    { icon: Calendar, key: 'exp1', color: 'from-blue-500 to-blue-600' },
+    { icon: Wrench, key: 'exp2', color: 'from-cyan-500 to-cyan-600' },
+    { icon: Award, key: 'exp3', color: 'from-purple-500 to-purple-600' },
+    { icon: Globe, color: 'from-emerald-500 to-emerald-600', customValue: 'Multiple', customLabel: 'Destinations Worldwide' },
+    { icon: BookOpen, color: 'from-orange-500 to-orange-600', customValue: 'B1', customLabel: 'Licensed Engineer' },
+    { icon: Users, color: 'from-rose-500 to-rose-600', customValue: 'Part 145', customLabel: 'Base Maintenance' },
   ];
   
-  const typeRatings = [
-    'Boeing 737 Series (3/4/5/6/7/8/900)',
-    'Boeing 777-200/300ER',
-    'Boeing 787-8/9/10',
-    'Airbus A330 PDC',
-    'Airbus A300-600'
+  const typeRatings = ['Boeing 737 Series (3/4/5/6/7/8/900)', 'Boeing 777-200/300ER', 'Boeing 787-8/9/10', 'Airbus A330 PDC', 'Airbus A300-600'];
+  
+  const projects = [
+    'B737-800 (2007, 2012, 2015)', 'B777-300ER (2010)', 'A330-300 (2012)', 'ERJ170 (2010)',
+    'B787-8/9/10 (2019)', 'A220-300 (2019)', 'A320 neo (2019)', 'A321neo (2022)', 'A350-900 (2023/2024)', 'B737MAX (2023/2024)'
   ];
+  
+  const licenses = t('about.licenses', { returnObjects: true });
   
   return (
     <section id="about" className="py-20 px-4 relative">
@@ -54,14 +55,17 @@ const About = () => {
               <div className={`w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r ${stat.color} p-2.5 group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className="w-full h-full text-white" />
               </div>
-              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-2xl font-bold text-white mb-1">
+                {stat.key ? t(`about.${stat.key}.title`).split(' ')[0] : stat.customValue}
+              </div>
+              <div className="text-gray-400 text-sm">
+                {stat.key ? t(`about.${stat.key}.desc`) : stat.customLabel}
+              </div>
             </motion.div>
           ))}
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Type Ratings Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +75,7 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-blue-400 mb-4 flex items-center gap-2">
               <Plane size={24} />
-              Aircraft Type Ratings
+              {t('about.typeRatingsTitle')}
             </h3>
             <ul className="space-y-2">
               {typeRatings.map((type, index) => (
@@ -89,7 +93,6 @@ const About = () => {
             </ul>
           </motion.div>
           
-          {/* EgyptAir Projects Section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -99,24 +102,16 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-cyan-400 mb-4 flex items-center gap-2">
               <Award size={24} />
-              EgyptAir New Projects
+              {t('about.projectsTitle')}
             </h3>
             <div className="space-y-1 max-h-64 overflow-y-auto custom-scroll">
-              <p className="text-gray-300 text-sm">• B737-800 (2007, 2012, 2015)</p>
-              <p className="text-gray-300 text-sm">• B777-300ER (2010)</p>
-              <p className="text-gray-300 text-sm">• A330-300 (2012)</p>
-              <p className="text-gray-300 text-sm">• ERJ170 (2010)</p>
-              <p className="text-gray-300 text-sm">• B787-8/9/10 (2019)</p>
-              <p className="text-gray-300 text-sm">• A220-300 (2019)</p>
-              <p className="text-gray-300 text-sm">• A320 neo (2019)</p>
-              <p className="text-gray-300 text-sm">• A321neo (2022)</p>
-              <p className="text-gray-300 text-sm">• A350-900 (2023/2024)</p>
-              <p className="text-gray-300 text-sm">• B737MAX (2023/2024)</p>
+              {projects.map((project, index) => (
+                <p key={index} className="text-gray-300 text-sm">• {project}</p>
+              ))}
             </div>
           </motion.div>
         </div>
         
-        {/* Qualifications */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -124,9 +119,9 @@ const About = () => {
           viewport={{ once: true }}
           className="mt-8 glass-morphism p-6 text-center"
         >
-          <h3 className="text-xl font-bold text-purple-400 mb-3">Licenses & Certifications</h3>
+          <h3 className="text-xl font-bold text-purple-400 mb-3">{t('about.licensesTitle')}</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {['B1 Licensed Engineer', 'Part 145', 'Part M', 'LWTR', 'ETOPS', 'EWIS', 'CDCCL', 'Human Factor'].map((cert, i) => (
+            {Array.isArray(licenses) && licenses.map((cert, i) => (
               <span key={i} className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300">
                 {cert}
               </span>
