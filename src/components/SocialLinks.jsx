@@ -1,16 +1,15 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin , FaEnvelope } from 'react-icons/fa';
 
 const SocialLinks = () => {
   const { t } = useTranslation();
   
-  // روابط وليد علام (استبدلها بالروابط الحقيقية)
   const socialLinks = [
     {
       name: 'whatsapp',
       icon: FaWhatsapp,
-      url: 'https://wa.me/201127782279', // رقم واتساب وليد
+      url: 'https://wa.me/201014141120',
       color: 'hover:bg-green-500',
       bgGradient: 'from-green-500 to-green-600',
       delay: 0.1
@@ -18,7 +17,7 @@ const SocialLinks = () => {
     {
       name: 'facebook',
       icon: FaFacebook,
-      url: 'https://facebook.com/walid.allam', // رابط الفيسبوك
+      url: 'https://www.facebook.com/share/1CWY87ENze/',
       color: 'hover:bg-blue-600',
       bgGradient: 'from-blue-600 to-blue-700',
       delay: 0.2
@@ -26,7 +25,7 @@ const SocialLinks = () => {
     {
       name: 'instagram',
       icon: FaInstagram,
-      url: 'https://instagram.com/walid.allam', // رابط الانستغرام
+      url: 'https://www.instagram.com/walid_allam9?igsh=am12aXVzZWM2a3Bo',  
       color: 'hover:bg-pink-600',
       bgGradient: 'from-pink-500 to-purple-600',
       delay: 0.3
@@ -34,23 +33,15 @@ const SocialLinks = () => {
     {
       name: 'linkedin',
       icon: FaLinkedin,
-      url: 'https://linkedin.com/in/walid-allam', // رابط لينكدإن
+      url: 'https://www.linkedin.com/in/walid-allam-84339b23b/',
       color: 'hover:bg-blue-700',
       bgGradient: 'from-blue-700 to-blue-800',
       delay: 0.4
     },
     {
-      name: 'github',
-      icon: FaGithub,
-      url: 'https://github.com/walidallam', // رابط جيت هاب
-      color: 'hover:bg-gray-700',
-      bgGradient: 'from-gray-700 to-gray-800',
-      delay: 0.5
-    },
-    {
       name: 'email',
       icon: FaEnvelope,
-      url: 'mailto:walid.allam@example.com', // البريد الإلكتروني
+      url: 'mailto:walid.Walidallam9@gmail.com',
       color: 'hover:bg-red-500',
       bgGradient: 'from-red-500 to-red-600',
       delay: 0.6
@@ -95,7 +86,6 @@ const SocialLinks = () => {
               flex items-center gap-2 overflow-hidden
             `}
           >
-            {/* تأثير الضوء عند المرور */}
             <motion.div
               className="absolute inset-0 bg-white/20"
               initial={{ x: '-100%' }}
