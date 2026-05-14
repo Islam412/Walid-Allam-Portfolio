@@ -1,15 +1,14 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaDownload, FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaDownload, FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import cvFile from '../assets/cv.pdf';
 
 const CVSection = () => {
   const { t } = useTranslation();
   
-  // بيانات وليد علام الحقيقية
   const contactInfo = {
-    phone1: '+2 0100 6018846',
-    phone2: '+2 01014141120',
+    phone1: '+2 01014141120',
+    phone2: '+2 0100 6018846',
     email: 'Walidallam9@gmail.com',
     address: '144 Region 9–Narges district–Al shorouk City–Cairo - Egypt'
   };
@@ -18,7 +17,7 @@ const CVSection = () => {
     {
       name: 'whatsapp',
       icon: FaWhatsapp,
-      url: `https://wa.me/20106018846`,
+      url: `https://wa.me/201014141120`,
       color: 'from-green-500 to-green-600',
       delay: 0.1
     },
@@ -32,30 +31,23 @@ const CVSection = () => {
     {
       name: 'facebook',
       icon: FaFacebook,
-      url: 'https://facebook.com/walid.allam',
+      url: 'https://www.facebook.com/share/1CWY87ENze/',
       color: 'from-blue-600 to-blue-700',
       delay: 0.2
     },
     {
       name: 'instagram',
       icon: FaInstagram,
-      url: 'https://instagram.com/walid.allam',
+      url: 'https://www.instagram.com/walid_allam9?igsh=am12aXVzZWM2a3Bo',
       color: 'from-pink-500 to-purple-600',
       delay: 0.3
     },
     {
       name: 'linkedin',
       icon: FaLinkedin,
-      url: 'https://linkedin.com/in/walid-allam',
+      url: 'https://www.linkedin.com/in/walid-allam-84339b23b/',
       color: 'from-blue-700 to-blue-800',
       delay: 0.4
-    },
-    {
-      name: 'github',
-      icon: FaGithub,
-      url: 'https://github.com/walidallam',
-      color: 'from-gray-700 to-gray-800',
-      delay: 0.5
     },
     {
       name: 'email',
@@ -69,7 +61,6 @@ const CVSection = () => {
   return (
     <section id="cv" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        {/* معلومات الاتصال السريعة */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
