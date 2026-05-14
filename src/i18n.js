@@ -13,26 +13,28 @@ const resources = {
       "hero": {
         "greeting": "Hello, I'm",
         "name": "Walid Allam",
-        "title": "Civil Aviation Engineer",
+        "title": "Civil Aviation Engineer | B1 Licensed",
         "cta": "Explore My Work"
       },
       "about": {
         "title": "About Me",
         "exp1": {
-          "title": "8+ Years Experience",
-          "desc": "In civil aircraft maintenance"
+          "title": "20+ Years Experience",
+          "desc": "In civil aircraft maintenance & engineering"
         },
         "exp2": {
-          "title": "International Certifications",
-          "desc": "FAA, EASA, IATA"
+          "title": "Multiple Type Ratings",
+          "desc": "B737, B777, B787, A330, A300-600"
         },
         "exp3": {
           "title": "Major Projects",
-          "desc": "Boeing & Airbus fleet management"
-        }
+          "desc": "11 New Aircraft Projects for EgyptAir"
+        },
+        "bio": "An enthusiastic and highly motivated Engineer with +20 years of experience in aviation maintenance and engineering. Highly knowledgeable in aviation regulations, safety standards, compliance, quality management and continuous improvement. Proven capability to define problems, collect & analyze data, and implement solutions using highly analytical skills in Aircraft Maintenance Management."
       },
       "work": {
-        "title": "My Work Gallery"
+        "title": "My Work Gallery",
+        "desc": "Aircraft maintenance & engineering projects"
       },
       "cv": {
         "title": "Curriculum Vitae",
@@ -60,26 +62,28 @@ const resources = {
       "hero": {
         "greeting": "مرحباً، أنا",
         "name": "وليد علام",
-        "title": "مهندس طيران مدني",
+        "title": "مهندس طيران مدني | B1 مرخص",
         "cta": "استكشف أعمالي"
       },
       "about": {
         "title": "من أنا",
         "exp1": {
-          "title": "خبرة 8+ سنوات",
-          "desc": "في صيانة الطائرات المدنية"
+          "title": "خبرة 20+ سنة",
+          "desc": "في صيانة وهندسة الطائرات المدنية"
         },
         "exp2": {
-          "title": "شهادات دولية",
-          "desc": "FAA, EASA, IATA"
+          "title": "اعتمادات متعددة",
+          "desc": "B737, B777, B787, A330, A300-600"
         },
         "exp3": {
           "title": "مشاريع كبرى",
-          "desc": "إدارة أسطول بوينغ وإيرباص"
-        }
+          "desc": "11 مشروع طائرات جديدة لمصر للطيران"
+        },
+        "bio": "مهندس متحمس وذو خبرة عالية مع +20 سنة من الخبرة في صيانة وهندسة الطيران. على دراية عالية بلوائح الطيران ومعايير السلامة والجودة والتحسين المستمر. قدرة مثبتة على تحديد المشكلات وجمع البيانات وتحليلها وتنفيذ الحلول باستخدام مهارات تحليلية عالية في إدارة صيانة الطائرات."
       },
       "work": {
-        "title": "معرض أعمالي"
+        "title": "معرض أعمالي",
+        "desc": "مشاريع صيانة وهندسة الطائرات"
       },
       "cv": {
         "title": "السيرة الذاتية",
@@ -107,26 +111,28 @@ const resources = {
       "hero": {
         "greeting": "Bonjour, je suis",
         "name": "Walid Allam",
-        "title": "Ingénieur Aviation Civile",
+        "title": "Ingénieur Aviation Civile | Licence B1",
         "cta": "Voir mes travaux"
       },
       "about": {
         "title": "À propos de moi",
         "exp1": {
-          "title": "8+ ans d'expérience",
-          "desc": "Maintenance aéronautique civile"
+          "title": "20+ ans d'expérience",
+          "desc": "Maintenance et ingénierie aéronautique"
         },
         "exp2": {
-          "title": "Certifications internationales",
-          "desc": "FAA, EASA, IATA"
+          "title": "Qualifications multiples",
+          "desc": "B737, B777, B787, A330, A300-600"
         },
         "exp3": {
           "title": "Projets majeurs",
-          "desc": "Gestion de flotte Boeing & Airbus"
-        }
+          "desc": "11 nouveaux avions pour EgyptAir"
+        },
+        "bio": "Ingénieur passionné et hautement motivé avec plus de 20 ans d'expérience dans la maintenance et l'ingénierie aéronautique. Très connaisseur des réglementations aéronautiques, des normes de sécurité, de la conformité, de la gestion de la qualité et de l'amélioration continue."
       },
       "work": {
-        "title": "Galerie de travaux"
+        "title": "Galerie de travaux",
+        "desc": "Projets de maintenance et d'ingénierie"
       },
       "cv": {
         "title": "Curriculum Vitae",
