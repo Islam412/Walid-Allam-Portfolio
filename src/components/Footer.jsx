@@ -46,21 +46,12 @@ const Footer = () => {
           transition={{ delay: 0.1 }}
           className="text-sm mb-2"
         >
-          © {currentYear} <span className="text-blue-400 font-semibold">
-            {isRTL ? 'وليد علام' : 'Walid Allam'}
-          </span>. {t('footer.rights')}
+            {t('footer.rights')}
+            © {isRTL ? 'وليد علام ' : 'Walid Allam '}
+            {currentYear} <span className="text-blue-400 font-semibold">
+          </span>. 
         </motion.p>
         
-        <motion.p 
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-sm mb-4"
-        >
-          {t('footer.rightsAr')} © {currentYear} <span className="text-cyan-400 font-semibold">
-            {isRTL ? 'للمهندس وليد علام' : 'for Eng. Walid Allam'}
-          </span>
-        </motion.p>
         
         {/* فاصل زخرفي */}
         <div className="flex justify-center items-center gap-3 my-4">

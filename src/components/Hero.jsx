@@ -27,7 +27,7 @@ const Hero = () => {
           className="w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-blue-500 neon-border mb-6"
         >
           <img 
-            src="https://ui-avatars.com/api/?name=Walid+Allam&background=3b82f6&color=fff&size=150&bold=true&length=2&fontsize=0.6"
+            src="/profile.jpg"
             alt="Walid Allam" 
             className="w-full h-full object-cover"
           />
