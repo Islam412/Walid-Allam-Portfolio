@@ -1,0 +1,12 @@
+{
+  "nav": { "home": "Home", "about": "About", "work": "Work", "cv": "CV" },
+  "hero": { "greeting": "Hello, I'm", "name": "Walid Allam", "title": "Civil Aviation Engineer", "cta": "Explore My Work" },
+  "about": { 
+    "title": "About Me", 
+    "exp1": { "title": "8 Years Experience", "desc": "In civil aircraft maintenance" },
+    "exp2": { "title": "International Certifications", "desc": "FAA, EASA, IATA" },
+    "exp3": { "title": "Major Projects", "desc": "Boeing & Airbus fleet management" }
+  },
+  "work": { "title": "Work Gallery" },
+  "cv": { "title": "Resume", "download": "Download CV" }
+}

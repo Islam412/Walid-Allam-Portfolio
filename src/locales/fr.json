@@ -1,0 +1,12 @@
+{
+  "nav": { "home": "Accueil", "about": "À propos", "work": "Travaux", "cv": "CV" },
+  "hero": { "greeting": "Bonjour, je suis", "name": "Walid Allam", "title": "Ingénieur Aviation Civile", "cta": "Voir mes travaux" },
+  "about": { 
+    "title": "À propos de moi", 
+    "exp1": { "title": "8 ans d'expérience", "desc": "Maintenance aéronautique civile" },
+    "exp2": { "title": "Certifications internationales", "desc": "FAA, EASA, IATA" },
+    "exp3": { "title": "Grands projets", "desc": "Gestion de flotte Boeing & Airbus" }
+  },
+  "work": { "title": "Galerie de travail" },
+  "cv": { "title": "Curriculum Vitae", "download": "Télécharger CV" }
+}
