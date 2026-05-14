@@ -1,27 +1,39 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaDownload, FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaDownload, FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 import cvFile from '../assets/cv.pdf';
 
 const CVSection = () => {
   const { t } = useTranslation();
   
-  // روابط التواصل الاجتماعي (استبدلها بالروابط الحقيقية لوليد علام)
+  // بيانات وليد علام الحقيقية
+  const contactInfo = {
+    phone1: '+2 0100 6018846',
+    phone2: '+2 01014141120',
+    email: 'Walidallam9@gmail.com',
+    address: '144 Region 9–Narges district–Al shorouk City–Cairo - Egypt'
+  };
+  
   const socialLinks = [
     {
       name: 'whatsapp',
       icon: FaWhatsapp,
-      url: 'https://wa.me/201127782279',
+      url: `https://wa.me/20106018846`,
       color: 'from-green-500 to-green-600',
-      hoverColor: 'hover:bg-green-500',
       delay: 0.1
+    },
+    {
+      name: 'phone',
+      icon: FaPhone,
+      url: `tel:${contactInfo.phone1.replace(/\s/g, '')}`,
+      color: 'from-blue-500 to-blue-600',
+      delay: 0.15
     },
     {
       name: 'facebook',
       icon: FaFacebook,
       url: 'https://facebook.com/walid.allam',
       color: 'from-blue-600 to-blue-700',
-      hoverColor: 'hover:bg-blue-600',
       delay: 0.2
     },
     {
@@ -29,7 +41,6 @@ const CVSection = () => {
       icon: FaInstagram,
       url: 'https://instagram.com/walid.allam',
       color: 'from-pink-500 to-purple-600',
-      hoverColor: 'hover:bg-pink-600',
       delay: 0.3
     },
     {
@@ -37,7 +48,6 @@ const CVSection = () => {
       icon: FaLinkedin,
       url: 'https://linkedin.com/in/walid-allam',
       color: 'from-blue-700 to-blue-800',
-      hoverColor: 'hover:bg-blue-700',
       delay: 0.4
     },
     {
@@ -45,15 +55,13 @@ const CVSection = () => {
       icon: FaGithub,
       url: 'https://github.com/walidallam',
       color: 'from-gray-700 to-gray-800',
-      hoverColor: 'hover:bg-gray-700',
       delay: 0.5
     },
     {
       name: 'email',
       icon: FaEnvelope,
-      url: 'mailto:walid.allam@example.com',
+      url: `mailto:${contactInfo.email}`,
       color: 'from-red-500 to-red-600',
-      hoverColor: 'hover:bg-red-500',
       delay: 0.6
     }
   ];
@@ -61,6 +69,25 @@ const CVSection = () => {
   return (
     <section id="cv" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
+        {/* معلومات الاتصال السريعة */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="glass-morphism p-6 mb-8 text-center"
+        >
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex items-center gap-2">
+              <FaPhone className="text-green-400" />
+              <span className="text-gray-300">{contactInfo.phone1}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-red-400" />
+              <span className="text-gray-300">{contactInfo.email}</span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* قسم السيرة الذاتية */}
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -80,10 +107,10 @@ const CVSection = () => {
               <FaDownload /> {t('cv.download')}
             </motion.a>
           </div>
-          <iframe src={cvFile} className="w-full h-[500px] rounded-xl border border-white/20" title="CV Preview" />
+          <iframe src={cvFile} className="w-full h-[600px] rounded-xl border border-white/20" title="CV Preview" />
         </motion.div>
 
-        {/* قسم التواصل الاجتماعي مع تأثيرات حركية وضوئية */}
+        {/* قسم التواصل الاجتماعي */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +118,7 @@ const CVSection = () => {
           className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
-            {t('contact.title') || 'تواصل معي'}
+            {t('contact.title')}
           </h2>
           <p className="text-gray-300">Connect with me on social media | تابعني على وسائل التواصل</p>
         </motion.div>
@@ -119,7 +146,6 @@ const CVSection = () => {
                 flex items-center gap-2 overflow-hidden
               `}
             >
-              {/* تأثير الضوء المتحرك عند المرور */}
               <motion.div
                 className="absolute inset-0 bg-white/30"
                 initial={{ x: '-100%' }}
@@ -127,20 +153,11 @@ const CVSection = () => {
                 transition={{ duration: 0.5 }}
               />
               
-              {/* الأيقونة */}
               <social.icon className="relative z-10 text-lg" />
-              
-              {/* اسم المنصة */}
-              <span className="relative z-10 hidden sm:inline">
-                {social.name === 'whatsapp' && 'WhatsApp'}
-                {social.name === 'facebook' && 'Facebook'}
-                {social.name === 'instagram' && 'Instagram'}
-                {social.name === 'linkedin' && 'LinkedIn'}
-                {social.name === 'github' && 'GitHub'}
-                {social.name === 'email' && 'Email'}
+              <span className="relative z-10 hidden sm:inline capitalize">
+                {social.name}
               </span>
               
-              {/* تأثير النيون حول الزر */}
               <div 
                 className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{
@@ -152,14 +169,14 @@ const CVSection = () => {
           ))}
         </div>
 
-        {/* نص إضافي للتواصل */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
           className="text-center mt-8 text-gray-400 text-sm"
         >
-          <p>📱 Available 24/7 for professional inquiries | متاح للتواصل المهني</p>
+          <p>📱 Available 24/7 for professional inquiries | متاح للتواصل المهني 24/7</p>
+          <p className="mt-2">📍 {contactInfo.address}</p>
         </motion.div>
       </div>
     </section>
