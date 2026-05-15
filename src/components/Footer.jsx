@@ -39,7 +39,6 @@ const Footer = () => {
           </motion.a>
         </div>
         
-        {/* حقوق الملكية - مترجمة */}
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +52,6 @@ const Footer = () => {
         </motion.p>
         
         
-        {/* فاصل زخرفي */}
         <div className="flex justify-center items-center gap-3 my-4">
           <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent w-16" />
           <motion.div 
@@ -66,7 +64,6 @@ const Footer = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent w-16" />
         </div>
         
-        {/* اسم المطور - مترجم */}
         <motion.p 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
